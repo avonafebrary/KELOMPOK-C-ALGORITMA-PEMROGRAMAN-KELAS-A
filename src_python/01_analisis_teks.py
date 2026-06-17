@@ -1,20 +1,19 @@
-# Soal Program 2
-# Program 2 - Membuat objek string K1 sampai K4
+# Soal Program 1
+# Program Menghitung Jumlah Kata dan Jumlah Kalimat
 
-# String yang mengandung tanda petik tunggal
-K1 = "Saya tak 'kan menyerah."
+# Membaca teks yang dimasukkan pengguna
+teks = input("Masukkan teks: ")
 
-# String yang mengandung tanda petik ganda
-K2 = 'Ia berkata, "Aku menyayangimu."'
+# Memisahkan teks menjadi kata-kata berdasarkan spasi
+kata = teks.split()
 
-# String yang mengandung petik tunggal dan ganda
-K3 = "\"Coba jelaskan pengertian 'cross-validation' dalam Machine Learning!\""
+# Menghitung jumlah kata
+jumlah_kata = len(kata)
 
-# String biasa
-K4 = "Surat keputusan itu bernomor 62/UN.34/19/2023."
+# Menghitung jumlah tanda titik sebagai jumlah kalimat
+jumlah_kalimat = teks.count(".")
 
-# Menampilkan isi string
-print(K1)
-print(K2)
-print(K3)
-print(K4)
+# Menampilkan hasil perhitungan
+print("\nHasil Perhitungan")
+print("Jumlah kata :", jumlah_kata)
+print("Jumlah kalimat :", jumlah_kalimat)
