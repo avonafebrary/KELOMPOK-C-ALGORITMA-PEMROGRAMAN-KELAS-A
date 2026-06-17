@@ -1,1 +1,19 @@
+# Program Menghitung Jumlah Kata dan Jumlah Kalimat
+
+# Membaca teks dari pengguna
+teks <- readline("Masukkan teks: ")
+
+# Memisahkan teks menjadi kata-kata berdasarkan spasi
+kata <- strsplit(teks, " ")[[1]]
+
+# Menghitung jumlah kata
+jumlah_kata <- length(kata)
+
+# Menghitung jumlah tanda titik sebagai jumlah kalimat
+jumlah_kalimat <- lengths(regmatches(teks, gregexpr("\\.", teks)))
+
+# Menampilkan hasil
+cat("\nHasil Perhitungan\n")
+cat("Jumlah kata :", jumlah_kata, "\n")
+cat("Jumlah kalimat :", jumlah_kalimat)
 
