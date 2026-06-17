@@ -1,19 +1,23 @@
-#Soal program nomor 3
-#valid
-#Input
-a = float(input("Masukkan nilai a: ")) # Membaca input dari pengguna dan mengkonversi ke tipe float
-b = float(input("Masukkan nilai b: ")) # Membaca input dari pengguna dan mengkonversi ke tipe float
-c = float(input("Masukkan nilai c: ")) # Membaca input dari pengguna dan mengkonversi ke tipe float
+# Program Mencari Akar Persamaan Kuadrat
+a = float(input("Masukkan nilai a : "))
+b = float(input("Masukkan nilai b : "))
+c = float(input("Masukkan nilai c : "))
 
-#Proses
-D = b**2 - 4*a*c          # Menghitung diskriminan; **2 artinya pangkat 2, * artinya perkalian
+D = b**2 - 4*a*c
 
-#Output
-if D >= 0:                            # Percabangan: jika diskriminan ≥ 0, akar-akar bersifat real
-    x1 = (-b + math.sqrt(D)) / (2*a)  #Menghitung akar pertama dengan rumus x1
-    x2 = (-b - math.sqrt(D)) / (2*a)  #Menghitung akar pertama dengan rumus x1
-    print(f"Akar-akar real:")         #Menampilkan "Akar-akar real" jika nilainya memenuhi
-    print(f"  x1 = {x1:.3f}")         #Menampilkan x1 dengan format f-string; :.3f berarti 3 angka desimal
-    print(f"  x2 = {x2:.3f}")         #Menampilkan x2 dengan format f-string; :.3f berarti 3 angka desimal
-else:                                 #Jika D < 0, akar-akarnya imajiner
-    print("Persamaan ini hanya memiliki akar-akar imajiner.") #Menampilkan pesan bahwa akar tidak real
+if D > 0:
+    x1 = (-b + (D**0.5)) / (2*a)
+    x2 = (-b - (D**0.5)) / (2*a)
+
+    print("Akar real berbeda")
+    print("x1 = %.3f" % x1)
+    print("x2 = %.3f" % x2)
+
+elif D == 0:
+    x = -b / (2*a)
+
+    print("Akar real kembar")
+    print("x1 = x2 = %.3f" % x)
+
+else:
+    print("Persamaan memiliki akar-akar imajiner")
